@@ -1,0 +1,28 @@
+[200~
+from threading import Thread
+
+class A(Thread):
+    def m1(self):
+        print('I am m1 method')
+
+    def run(self):
+        print('I am run method')
+
+
+a1=A()
+a1.start()
+
+
+from abc import ABC ,abstractmethod
+class Sample(ABC):
+    @abstractmethod
+    def f1(self):
+        pass
+    def f2(self):
+        print('i am f2')
+class child(Sample):
+    def f1(self):
+        print('i am child')
+c1=child()
+c1.f1()
+c1.f2()
